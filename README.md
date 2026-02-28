@@ -1,2 +1,21 @@
-# bioinformatics-learning
-Course notes and study plan for bioinformatics
+# 生物信息学学习仓库
+
+## 一、仓库简介
+
+
+本仓库用于记录《生物信息学》课程的学习过程，
+包括课堂笔记、作业文件及学习计划。
+
+## 二、仓库结构
+
+本仓库按照以下结构组织：
+
+- README.md    ：总说明
+- notes/       ：课堂笔记（后续创建）
+- assignments/ ：课程作业及相关代码（后续创建）
+
+## 三、备份策略
+
+- 所有学习资料均存储在 GitHub 云端
+- 本地保留完整副本
+- 在进行修改后进行 commit

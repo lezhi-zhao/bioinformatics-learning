@@ -1,0 +1,42 @@
+﻿---
+title: "课程主页"
+---
+
+# 课程简介
+
+本网站用于记录《生物信息学》课程的课堂笔记与学习计划，
+强调结构化整理与持续更新。
+
+---
+
+# 导航
+
+- [课堂笔记](notes/index.qmd)
+  - [Lecture 01：Getting Started](notes/lecture-01.qmd)
+- [学期学习计划（本页下方）](#学期学习计划)
+
+---
+
+# 课堂笔记总览
+
+## Lecture 01：Getting Started
+
+**主题：** 生物信息学分析流程与 Model / Algorithm 的区别  
+
+**核心内容：**
+
+- 生物信息学的基本流程：Question → Information → Analysis → Modeling
+- 区分 **Model（结构）** 与 **Algorithm（过程）**
+- 理解课程强调的实践能力与工具链
+
+- [查看课堂笔记目录](notes/index.qmd)
+  - [直接进入 Lecture 01](notes/lecture-01.qmd)
+
+---
+
+# 学期学习计划
+
+- 建立结构化课堂笔记体系
+- 提升 **Linux** 命令行能力
+- 系统掌握 **R 语言** 数据处理与可视化
+- 理解生物信息学中的 **模型与算法框架**

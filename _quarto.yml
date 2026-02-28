@@ -1,0 +1,21 @@
+﻿project:
+  type: website
+
+website:
+  title: "生物信息学课程学习记录"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: notes/index.qmd
+        text: 课堂笔记
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
+execute:
+  enabled: false
+
+lang: zh-CN

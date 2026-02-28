@@ -1,3 +1,13 @@
+# Quarto / rendered outputs
 _site/
-*_files/
 .quarto/
+*_files/
+README.html
+*_cache/
+**/*.quarto_ipynb
+
+# Optional local logs
+render.log
+preview-*.log
+
+/.quarto/
