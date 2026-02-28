@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>lecture-01 – 生物信息学课程学习记录</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">生物信息学课程学习记录</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="搜索"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="展开或折叠导航栏" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notes/index.html"> 
+<span class="menu-text">课堂笔记</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">该页面内容</h2>
+   
+  <ul>
+  <li><a href="#第一堂课课堂笔记" id="toc-第一堂课课堂笔记" class="nav-link active" data-scroll-target="#第一堂课课堂笔记">第一堂课课堂笔记</a>
+  <ul class="collapse">
+  <li><a href="#课程结构与学习方式course-logistics" id="toc-课程结构与学习方式course-logistics" class="nav-link" data-scroll-target="#课程结构与学习方式course-logistics">1. 课程结构与学习方式（Course Logistics）</a></li>
+  <li><a href="#什么是生物信息学big-data-driven" id="toc-什么是生物信息学big-data-driven" class="nav-link" data-scroll-target="#什么是生物信息学big-data-driven">2. 什么是生物信息学？（Big Data-driven）</a></li>
+  <li><a href="#algorithm-与-model-的区别重点" id="toc-algorithm-与-model-的区别重点" class="nav-link" data-scroll-target="#algorithm-与-model-的区别重点">3. Algorithm 与 Model 的区别（重点）</a>
+  <ul class="collapse">
+  <li><a href="#model模型" id="toc-model模型" class="nav-link" data-scroll-target="#model模型">3.1 Model（模型）</a></li>
+  <li><a href="#algorithm算法" id="toc-algorithm算法" class="nav-link" data-scroll-target="#algorithm算法">3.2 Algorithm（算法）</a></li>
+  <li><a href="#二者对比" id="toc-二者对比" class="nav-link" data-scroll-target="#二者对比">3.3 二者对比</a></li>
+  <li><a href="#二者关系" id="toc-二者关系" class="nav-link" data-scroll-target="#二者关系">3.4 二者关系</a></li>
+  </ul></li>
+  <li><a href="#生物信息学与大数据" id="toc-生物信息学与大数据" class="nav-link" data-scroll-target="#生物信息学与大数据">4. 生物信息学与大数据</a></li>
+  <li><a href="#本节课核心理解" id="toc-本节课核心理解" class="nav-link" data-scroll-target="#本节课核心理解">5. 本节课核心理解</a></li>
+  <li><a href="#本学期学习目标与规划" id="toc-本学期学习目标与规划" class="nav-link" data-scroll-target="#本学期学习目标与规划">6. 本学期学习目标与规划</a>
+  <ul class="collapse">
+  <li><a href="#对课程内容的理解" id="toc-对课程内容的理解" class="nav-link" data-scroll-target="#对课程内容的理解">6.1 对课程内容的理解</a></li>
+  <li><a href="#本学期能力目标" id="toc-本学期能力目标" class="nav-link" data-scroll-target="#本学期能力目标">6.2 本学期能力目标</a></li>
+  <li><a href="#linux-使用能力" id="toc-linux-使用能力" class="nav-link" data-scroll-target="#linux-使用能力">（1）Linux 使用能力</a></li>
+  <li><a href="#r-语言能力" id="toc-r-语言能力" class="nav-link" data-scroll-target="#r-语言能力">（2）R 语言能力</a></li>
+  <li><a href="#长期学习方向continue-learning" id="toc-长期学习方向continue-learning" class="nav-link" data-scroll-target="#长期学习方向continue-learning">6.3 长期学习方向（Continue Learning）</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lecture 01：Getting Started</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="第一堂课课堂笔记" class="level1">
+<h1>第一堂课课堂笔记</h1>
+<section id="课程结构与学习方式course-logistics" class="level2">
+<h2 class="anchored" data-anchor-id="课程结构与学习方式course-logistics">1. 课程结构与学习方式（Course Logistics）</h2>
+<p>本课程不仅讲授理论知识，更强调实践能力。</p>
+<p>核心要求包括：</p>
+<ul>
+<li>使用 <strong>GitHub</strong> 管理学习过程</li>
+<li>定期<strong>备份</strong>（Backup your work）</li>
+<li>使用 <strong>Markdown</strong> 进行结构化记录</li>
+<li>学习 <strong>Linux、R、Python</strong> 等工具</li>
+</ul>
+<p>课程强调：</p>
+<blockquote class="blockquote">
+<p>不只是运行软件，而是<strong>理解分析流程</strong>。</p>
+</blockquote>
+<hr>
+</section>
+<section id="什么是生物信息学big-data-driven" class="level2">
+<h2 class="anchored" data-anchor-id="什么是生物信息学big-data-driven">2. 什么是生物信息学？（Big Data-driven）</h2>
+<p>课程提出：</p>
+<blockquote class="blockquote">
+<p>生命系统可以被视为<strong>信息系统</strong>。</p>
+</blockquote>
+<p>DNA / RNA 序列是生命的“语言”，<br>
+生物信息学的目标是解读这种语言。</p>
+<p>生物信息学分析的基本流程包括：</p>
+<ol type="1">
+<li><strong>Question</strong>（提出问题）</li>
+<li><strong>Information</strong>（获取数据）</li>
+<li><strong>Analysis</strong>（数据处理）</li>
+<li><strong>Modeling</strong>（建模与计算）</li>
+</ol>
+<p>这说明：</p>
+<ul>
+<li>生物问题 → 数据问题 → 数学问题 → 计算问题</li>
+</ul>
+<hr>
+</section>
+<section id="algorithm-与-model-的区别重点" class="level2">
+<h2 class="anchored" data-anchor-id="algorithm-与-model-的区别重点">3. Algorithm 与 Model 的区别（重点）</h2>
+<p>在分析流程的最后阶段，课件中同时出现：</p>
+<blockquote class="blockquote">
+<p><strong>Probabilistic Model &amp; Computational Algorithm</strong></p>
+</blockquote>
+<p>这表明两者相关，但并不相同。</p>
+<hr>
+<section id="model模型" class="level3">
+<h3 class="anchored" data-anchor-id="model模型">3.1 Model（模型）</h3>
+<p><strong>Model 用于描述数据结构与关系。</strong></p>
+<ul>
+<li>描述数据的结构</li>
+<li>表达变量之间的关系</li>
+<li>给出对现实的数学假设</li>
+</ul>
+<p>模型回答的问题是：</p>
+<blockquote class="blockquote">
+<p>数据“应该如何被<strong>理解</strong>”？</p>
+</blockquote>
+<p>在机器学习部分，课件提到：</p>
+<ul>
+<li>线性模型</li>
+<li>逻辑回归</li>
+<li>神经网络</li>
+</ul>
+<p>这些都是对数据关系的假设结构。</p>
+<hr>
+</section>
+<section id="algorithm算法" class="level3">
+<h3 class="anchored" data-anchor-id="algorithm算法">3.2 Algorithm（算法）</h3>
+<p><strong>Algorithm 用于执行计算过程。</strong></p>
+<ul>
+<li>在模型框架下进行计算</li>
+<li>求解参数</li>
+<li>得到预测结果</li>
+</ul>
+<p>算法回答的问题是：</p>
+<blockquote class="blockquote">
+<p>在这个模型假设下，如何<strong>计算</strong>？</p>
+</blockquote>
+<p>例如：</p>
+<ul>
+<li>迭代计算</li>
+<li>优化过程</li>
+<li>计算步骤</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>模型强调”结构”，算法强调”过程”。</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="二者对比" class="level3">
+<h3 class="anchored" data-anchor-id="二者对比">3.3 二者对比</h3>
+<p><strong>核心差异：模型回答“如何描述”，算法回答“如何计算”。</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>方面</th>
+<th>Model</th>
+<th>Algorithm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>本质</td>
+<td>数学结构</td>
+<td>计算步骤</td>
+</tr>
+<tr class="even">
+<td>关注点</td>
+<td>数据关系</td>
+<td>求解过程</td>
+</tr>
+<tr class="odd">
+<td>作用</td>
+<td>描述与假设</td>
+<td>计算与实现</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="二者关系" class="level3">
+<h3 class="anchored" data-anchor-id="二者关系">3.4 二者关系</h3>
+<p><strong>模型定义分析框架，</strong><br>
+<strong>算法在该框架下执行计算。</strong></p>
+<p>在生物信息学中：</p>
+<ul>
+<li>先建立对生物数据的假设模型</li>
+<li>再设计或选择算法进行求解</li>
+</ul>
+<p>二者<strong>缺一不可</strong>。</p>
+<hr>
+</section>
+</section>
+<section id="生物信息学与大数据" class="level2">
+<h2 class="anchored" data-anchor-id="生物信息学与大数据">4. 生物信息学与大数据</h2>
+<p>课件强调：</p>
+<ul>
+<li>高通量测序（NGS）</li>
+<li>大规模基因组计划</li>
+<li>多组学数据</li>
+</ul>
+<p>特点：</p>
+<ul>
+<li>数据规模大</li>
+<li>数据结构复杂</li>
+<li>需要计算方法支持</li>
+</ul>
+<p>因此：</p>
+<blockquote class="blockquote">
+<p>生物信息学是<strong>数据驱动</strong>的学科。</p>
+</blockquote>
+<hr>
+</section>
+<section id="本节课核心理解" class="level2">
+<h2 class="anchored" data-anchor-id="本节课核心理解">5. 本节课核心理解</h2>
+<ul>
+<li>生物信息学是 <strong>问题驱动 + 数据驱动</strong> 的学科。</li>
+<li><strong>模型</strong> 决定分析框架。</li>
+<li><strong>算法</strong> 决定计算实现。</li>
+<li>课程强调实践与工具能力。</li>
+</ul>
+</section>
+<section id="本学期学习目标与规划" class="level2">
+<h2 class="anchored" data-anchor-id="本学期学习目标与规划">6. 本学期学习目标与规划</h2>
+<section id="对课程内容的理解" class="level3">
+<h3 class="anchored" data-anchor-id="对课程内容的理解">6.1 对课程内容的理解</h3>
+<p>本课程围绕生物信息学的基本分析流程展开：</p>
+<ul>
+<li>从生物问题出发</li>
+<li>获取与整理数据</li>
+<li>建立模型</li>
+<li>通过算法进行计算分析</li>
+</ul>
+<p>课程内容将涉及：</p>
+<ul>
+<li>生物数据类型与特征</li>
+<li>基本统计与机器学习思想</li>
+<li>模型与算法的关系</li>
+<li>实践工具（Linux、R 等）</li>
+</ul>
+<hr>
+</section>
+<section id="本学期能力目标" class="level3">
+<h3 class="anchored" data-anchor-id="本学期能力目标">6.2 本学期能力目标</h3>
+<p>结合课程要求，我希望重点提升以下能力：</p>
+</section>
+<section id="linux-使用能力" class="level3">
+<h3 class="anchored" data-anchor-id="linux-使用能力">（1）Linux 使用能力</h3>
+<ul>
+<li>熟悉基本命令（ls, cd, grep 等）</li>
+<li>理解文件系统结构</li>
+<li>能在终端完成基础数据处理</li>
+</ul>
+</section>
+<section id="r-语言能力" class="level3">
+<h3 class="anchored" data-anchor-id="r-语言能力">（2）R 语言能力</h3>
+<p>寒假曾接触 R，但基础薄弱。</p>
+<p>本学期希望：</p>
+<ul>
+<li>理解数据结构与基本语法</li>
+<li>掌握数据整理与可视化方法</li>
+<li>能够完成简单的统计分析任务</li>
+</ul>
+<hr>
+</section>
+<section id="长期学习方向continue-learning" class="level3">
+<h3 class="anchored" data-anchor-id="长期学习方向continue-learning">6.3 长期学习方向（Continue Learning）</h3>
+<p>在完成课程基本要求的基础上，我希望进一步：</p>
+<ul>
+<li>深入理解统计模型与机器学习方法</li>
+<li>学习更系统的数据分析流程</li>
+<li>将模型与算法思维应用到真实生物数据问题中</li>
+</ul>
+<blockquote class="blockquote">
+<p>目标是<strong>从“会使用工具”逐步过渡到“理解分析框架”</strong>。</p>
+</blockquote>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

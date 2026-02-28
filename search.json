@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "notes/lecture-01.html",
+    "href": "notes/lecture-01.html",
+    "title": "Lecture 01：Getting Started",
+    "section": "",
+    "text": "本课程不仅讲授理论知识，更强调实践能力。\n核心要求包括：\n\n使用 GitHub 管理学习过程\n定期备份（Backup your work）\n使用 Markdown 进行结构化记录\n学习 Linux、R、Python 等工具\n\n课程强调：\n\n不只是运行软件，而是理解分析流程。\n\n\n\n\n\n课程提出：\n\n生命系统可以被视为信息系统。\n\nDNA / RNA 序列是生命的“语言”，\n生物信息学的目标是解读这种语言。\n生物信息学分析的基本流程包括：\n\nQuestion（提出问题）\nInformation（获取数据）\nAnalysis（数据处理）\nModeling（建模与计算）\n\n这说明：\n\n生物问题 → 数据问题 → 数学问题 → 计算问题\n\n\n\n\n\n在分析流程的最后阶段，课件中同时出现：\n\nProbabilistic Model & Computational Algorithm\n\n这表明两者相关，但并不相同。\n\n\n\nModel 用于描述数据结构与关系。\n\n描述数据的结构\n表达变量之间的关系\n给出对现实的数学假设\n\n模型回答的问题是：\n\n数据“应该如何被理解”？\n\n在机器学习部分，课件提到：\n\n线性模型\n逻辑回归\n神经网络\n\n这些都是对数据关系的假设结构。\n\n\n\n\nAlgorithm 用于执行计算过程。\n\n在模型框架下进行计算\n求解参数\n得到预测结果\n\n算法回答的问题是：\n\n在这个模型假设下，如何计算？\n\n例如：\n\n迭代计算\n优化过程\n计算步骤\n\n\n模型强调”结构”，算法强调”过程”。\n\n\n\n\n\n核心差异：模型回答“如何描述”，算法回答“如何计算”。\n\n\n\n方面\nModel\nAlgorithm\n\n\n\n\n本质\n数学结构\n计算步骤\n\n\n关注点\n数据关系\n求解过程\n\n\n作用\n描述与假设\n计算与实现\n\n\n\n\n\n\n\n模型定义分析框架，\n算法在该框架下执行计算。\n在生物信息学中：\n\n先建立对生物数据的假设模型\n再设计或选择算法进行求解\n\n二者缺一不可。\n\n\n\n\n\n课件强调：\n\n高通量测序（NGS）\n大规模基因组计划\n多组学数据\n\n特点：\n\n数据规模大\n数据结构复杂\n需要计算方法支持\n\n因此：\n\n生物信息学是数据驱动的学科。\n\n\n\n\n\n\n生物信息学是 问题驱动 + 数据驱动 的学科。\n模型 决定分析框架。\n算法 决定计算实现。\n课程强调实践与工具能力。\n\n\n\n\n\n\n本课程围绕生物信息学的基本分析流程展开：\n\n从生物问题出发\n获取与整理数据\n建立模型\n通过算法进行计算分析\n\n课程内容将涉及：\n\n生物数据类型与特征\n基本统计与机器学习思想\n模型与算法的关系\n实践工具（Linux、R 等）\n\n\n\n\n\n结合课程要求，我希望重点提升以下能力：\n\n\n\n\n熟悉基本命令（ls, cd, grep 等）\n理解文件系统结构\n能在终端完成基础数据处理\n\n\n\n\n寒假曾接触 R，但基础薄弱。\n本学期希望：\n\n理解数据结构与基本语法\n掌握数据整理与可视化方法\n能够完成简单的统计分析任务\n\n\n\n\n\n在完成课程基本要求的基础上，我希望进一步：\n\n深入理解统计模型与机器学习方法\n学习更系统的数据分析流程\n将模型与算法思维应用到真实生物数据问题中\n\n\n目标是从“会使用工具”逐步过渡到“理解分析框架”。"
+  },
+  {
+    "objectID": "notes/lecture-01.html#课程结构与学习方式course-logistics",
+    "href": "notes/lecture-01.html#课程结构与学习方式course-logistics",
+    "title": "Lecture 01：Getting Started",
+    "section": "",
+    "text": "本课程不仅讲授理论知识，更强调实践能力。\n核心要求包括：\n\n使用 GitHub 管理学习过程\n定期备份（Backup your work）\n使用 Markdown 进行结构化记录\n学习 Linux、R、Python 等工具\n\n课程强调：\n\n不只是运行软件，而是理解分析流程。"
+  },
+  {
+    "objectID": "notes/lecture-01.html#什么是生物信息学big-data-driven",
+    "href": "notes/lecture-01.html#什么是生物信息学big-data-driven",
+    "title": "Lecture 01：Getting Started",
+    "section": "",
+    "text": "课程提出：\n\n生命系统可以被视为信息系统。\n\nDNA / RNA 序列是生命的“语言”，\n生物信息学的目标是解读这种语言。\n生物信息学分析的基本流程包括：\n\nQuestion（提出问题）\nInformation（获取数据）\nAnalysis（数据处理）\nModeling（建模与计算）\n\n这说明：\n\n生物问题 → 数据问题 → 数学问题 → 计算问题"
+  },
+  {
+    "objectID": "notes/lecture-01.html#algorithm-与-model-的区别重点",
+    "href": "notes/lecture-01.html#algorithm-与-model-的区别重点",
+    "title": "Lecture 01：Getting Started",
+    "section": "",
+    "text": "在分析流程的最后阶段，课件中同时出现：\n\nProbabilistic Model & Computational Algorithm\n\n这表明两者相关，但并不相同。\n\n\n\nModel 用于描述数据结构与关系。\n\n描述数据的结构\n表达变量之间的关系\n给出对现实的数学假设\n\n模型回答的问题是：\n\n数据“应该如何被理解”？\n\n在机器学习部分，课件提到：\n\n线性模型\n逻辑回归\n神经网络\n\n这些都是对数据关系的假设结构。\n\n\n\n\nAlgorithm 用于执行计算过程。\n\n在模型框架下进行计算\n求解参数\n得到预测结果\n\n算法回答的问题是：\n\n在这个模型假设下，如何计算？\n\n例如：\n\n迭代计算\n优化过程\n计算步骤\n\n\n模型强调”结构”，算法强调”过程”。\n\n\n\n\n\n核心差异：模型回答“如何描述”，算法回答“如何计算”。\n\n\n\n方面\nModel\nAlgorithm\n\n\n\n\n本质\n数学结构\n计算步骤\n\n\n关注点\n数据关系\n求解过程\n\n\n作用\n描述与假设\n计算与实现\n\n\n\n\n\n\n\n模型定义分析框架，\n算法在该框架下执行计算。\n在生物信息学中：\n\n先建立对生物数据的假设模型\n再设计或选择算法进行求解\n\n二者缺一不可。"
+  },
+  {
+    "objectID": "notes/lecture-01.html#生物信息学与大数据",
+    "href": "notes/lecture-01.html#生物信息学与大数据",
+    "title": "Lecture 01：Getting Started",
+    "section": "",
+    "text": "课件强调：\n\n高通量测序（NGS）\n大规模基因组计划\n多组学数据\n\n特点：\n\n数据规模大\n数据结构复杂\n需要计算方法支持\n\n因此：\n\n生物信息学是数据驱动的学科。"
+  },
+  {
+    "objectID": "notes/lecture-01.html#本节课核心理解",
+    "href": "notes/lecture-01.html#本节课核心理解",
+    "title": "Lecture 01：Getting Started",
+    "section": "",
+    "text": "生物信息学是 问题驱动 + 数据驱动 的学科。\n模型 决定分析框架。\n算法 决定计算实现。\n课程强调实践与工具能力。"
+  },
+  {
+    "objectID": "notes/lecture-01.html#本学期学习目标与规划",
+    "href": "notes/lecture-01.html#本学期学习目标与规划",
+    "title": "Lecture 01：Getting Started",
+    "section": "",
+    "text": "本课程围绕生物信息学的基本分析流程展开：\n\n从生物问题出发\n获取与整理数据\n建立模型\n通过算法进行计算分析\n\n课程内容将涉及：\n\n生物数据类型与特征\n基本统计与机器学习思想\n模型与算法的关系\n实践工具（Linux、R 等）\n\n\n\n\n\n结合课程要求，我希望重点提升以下能力：\n\n\n\n\n熟悉基本命令（ls, cd, grep 等）\n理解文件系统结构\n能在终端完成基础数据处理\n\n\n\n\n寒假曾接触 R，但基础薄弱。\n本学期希望：\n\n理解数据结构与基本语法\n掌握数据整理与可视化方法\n能够完成简单的统计分析任务\n\n\n\n\n\n在完成课程基本要求的基础上，我希望进一步：\n\n深入理解统计模型与机器学习方法\n学习更系统的数据分析流程\n将模型与算法思维应用到真实生物数据问题中\n\n\n目标是从“会使用工具”逐步过渡到“理解分析框架”。"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "课程主页",
+    "section": "",
+    "text": "本网站用于记录《生物信息学》课程的课堂笔记与学习计划， 强调结构化整理与持续更新。"
+  },
+  {
+    "objectID": "index.html#lecture-01getting-started",
+    "href": "index.html#lecture-01getting-started",
+    "title": "课程主页",
+    "section": "Lecture 01：Getting Started",
+    "text": "Lecture 01：Getting Started\n主题： 生物信息学分析流程与 Model / Algorithm 的区别\n核心内容：\n\n生物信息学的基本流程：Question → Information → Analysis → Modeling\n区分 Model（结构） 与 Algorithm（过程）\n理解课程强调的实践能力与工具链\n查看课堂笔记目录\n\n直接进入 Lecture 01"
+  },
+  {
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "课堂笔记",
+    "section": "",
+    "text": "本页面记录本学期《生物信息学》课程的课堂笔记， 按授课顺序整理，每节课单独成页。\n\n\n\nLecture 01：Getting Started"
+  },
+  {
+    "objectID": "notes/index.html#本学期笔记",
+    "href": "notes/index.html#本学期笔记",
+    "title": "课堂笔记",
+    "section": "",
+    "text": "Lecture 01：Getting Started"
+  }
+]
